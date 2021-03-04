@@ -18,7 +18,7 @@ class CategoryController extends Controller
     /**
      * @return AnonymousResourceCollection
      */
-    public function index()
+    public function index(): AnonymousResourceCollection
     {
         $categories = Category::whereNull('category_id')
             ->with('childrenCategories')
