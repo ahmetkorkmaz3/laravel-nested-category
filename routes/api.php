@@ -15,5 +15,24 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::apiResource('categories', CategoryController::class);
-Route::apiResource('products', ProductController::class);
+Route::prefix('categories')->group(function () {
+    Route::get('', [CategoryController::class, 'index']);
+    Route::post('', [CategoryController::class, 'store']);
+
+    Route::prefix('/{category}')->group(function () {
+        Route::get('', [CategoryController::class, 'show']);
+        Route::put('', [CategoryController::class, 'update']);
+        Route::delete('', [CategoryController::class, 'destroy']);
+
+        Route::prefix('products')->group(function () {
+            Route::get('', [ProductController::class, 'index']);
+            Route::post('', [ProductController::class, 'store']);
+        });
+    });
+});
+
+Route::prefix('products/{product}')->group(function () {
+    Route::get('', [ProductController::class, 'show']);
+    Route::put('', [ProductController::class, 'update']);
+    Route::delete('', [ProductController::class, 'destroy']);
+});
