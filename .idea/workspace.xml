@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +164,9 @@
       <command value="artisan make:request Category/StoreCategoryRequest" />
       <command value="artisan make:request Category/UpdateCategoryRequest" />
       <command value="artisan route:list" />
+      <command value="artisan make:resource Product/ProductResource" />
+      <command value="artisan make:request Product/StoreProductRequest" />
+      <command value="artisan make:request Product/UpdateProductRequest" />
     </option>
   </component>
   <component name="RunManager">
@@ -182,7 +185,8 @@
       <updated>1614877634467</updated>
       <workItem from="1614877637688" duration="2800000" />
       <workItem from="1614882017709" duration="13000" />
-      <workItem from="1614882043740" duration="3828000" />
+      <workItem from="1614882043740" duration="4553000" />
+      <workItem from="1614938892954" duration="360000" />
     </task>
     <servers />
   </component>

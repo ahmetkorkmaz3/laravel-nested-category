@@ -2,63 +2,98 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\Product\StoreProductRequest;
+use App\Http\Requests\Product\UpdateProductRequest;
+use App\Http\Resources\Product\ProductResource;
+use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
+use PHPUnit\Exception;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @param Category $category
+     * @return AnonymousResourceCollection
      */
-    public function index()
+    public function index(Category $category): AnonymousResourceCollection
     {
-        //
+        $products = Product::where('category_id', $category->id)->get();
+        return ProductResource::collection($products);
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param StoreProductRequest $request
+     * @param Category $category
+     * @return ProductResource
+     * @throws HttpException
+     * @throws NotFoundHttpException
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request, Category $category): ProductResource
     {
-        //
+        DB::beginTransaction();
+        try {
+            $product = $category->products()->create($request->validated());
+        } catch (Exception $exception) {
+            DB::rollBack();
+            abort(500, $exception);
+        }
+        DB::commit();
+
+        return ProductResource::make($product);
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
+     * @param Product $product
+     * @return ProductResource
      */
-    public function show(Product $product)
+    public function show(Product $product): ProductResource
     {
-        //
+        return ProductResource::make($product);
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
+     * @param UpdateProductRequest $request
+     * @param Product $product
+     * @return ProductResource
+     * @throws HttpException
+     * @throws NotFoundHttpException
      */
-    public function update(Request $request, Product $product)
+    public function update(UpdateProductRequest $request, Product $product): ProductResource
     {
-        //
+        DB::beginTransaction();
+        try {
+            $product->update($request->validated());
+        } catch (Exception $exception) {
+            DB::rollBack();
+            abort(500, $exception);
+        }
+        DB::commit();
+
+        return ProductResource::make($product);
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
+     * @param Product $product
+     * @return Response
+     * @throws HttpException
+     * @throws NotFoundHttpException
      */
-    public function destroy(Product $product)
+    public function destroy(Product $product): Response
     {
-        //
+        DB::beginTransaction();
+        try {
+            $product->delete();
+        } catch (Exception $exception) {
+            DB::rollBack();
+            abort(500, $exception);
+        }
+        DB::commit();
+
+        return response()->noContent();
     }
 }
