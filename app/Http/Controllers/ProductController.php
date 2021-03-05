@@ -25,7 +25,7 @@ class ProductController extends Controller
         $products = Product::with('category')->whereHas('category', function ($query) use ($category) {
             $query->where('category_id', $category->id)
                 ->orWhere('id', $category->id);
-        })->paginate(20);
+        })->orderBy('created_at', 'DESC')->paginate(20);
 
         return ProductResource::collection($products);
     }
