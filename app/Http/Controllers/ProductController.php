@@ -22,7 +22,11 @@ class ProductController extends Controller
      */
     public function index(Category $category): AnonymousResourceCollection
     {
-        $products = Product::where('category_id', $category->id)->with('category')->get();
+        $products = Product::with('category')->whereHas('category', function ($query) use ($category) {
+            $query->where('category_id', $category->id)
+                ->orWhere('id', $category->id);
+        })->paginate(20);
+
         return ProductResource::collection($products);
     }
 
