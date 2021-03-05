@@ -17,7 +17,7 @@ class CategoryTreeResource extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'products_count' => $this->products->count(),
-            'children_categories' => CategoryTreeResource::collection($this->whenLoaded('childrenCategories')),
+            'children_categories' => CategoryTreeResource::collection($this->childrenCategories),
         ];
     }
 }
