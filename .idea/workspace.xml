@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Product/StoreProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Product/StoreProductRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Product/UpdateProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Product/UpdateProductRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Product/ProductResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +165,6 @@
       <command value="art migrate" />
       <command value="artisan migrate:reset" />
       <command value="artisan migrate" />
-      <command value="artisan serve" />
       <command value="artisan make:resource Category/CategoryResource" />
       <command value="artisan make:request Category/StoreCategoryRequest" />
       <command value="artisan make:request Category/UpdateCategoryRequest" />
@@ -167,6 +172,8 @@
       <command value="artisan make:resource Product/ProductResource" />
       <command value="artisan make:request Product/StoreProductRequest" />
       <command value="artisan make:request Product/UpdateProductRequest" />
+      <command value="artisan serve" />
+      <command value="artisan make:resource Category/CategoryTreeResource" />
     </option>
   </component>
   <component name="RunManager">
@@ -186,7 +193,7 @@
       <workItem from="1614877637688" duration="2800000" />
       <workItem from="1614882017709" duration="13000" />
       <workItem from="1614882043740" duration="4553000" />
-      <workItem from="1614938892954" duration="360000" />
+      <workItem from="1614938892954" duration="993000" />
     </task>
     <servers />
   </component>

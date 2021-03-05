@@ -22,7 +22,7 @@ class ProductController extends Controller
      */
     public function index(Category $category): AnonymousResourceCollection
     {
-        $products = Product::where('category_id', $category->id)->get();
+        $products = Product::where('category_id', $category->id)->with('category')->get();
         return ProductResource::collection($products);
     }
 
@@ -53,6 +53,7 @@ class ProductController extends Controller
      */
     public function show(Product $product): ProductResource
     {
+        $product->load('category');
         return ProductResource::make($product);
     }
 
@@ -74,6 +75,7 @@ class ProductController extends Controller
         }
         DB::commit();
 
+        $product->load('category');
         return ProductResource::make($product);
     }
 

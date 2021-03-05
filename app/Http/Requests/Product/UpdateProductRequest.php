@@ -11,9 +11,9 @@ class UpdateProductRequest extends FormRequest
      *
      * @return bool
      */
-    public function authorize()
+    public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,10 +21,22 @@ class UpdateProductRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(): array
     {
         return [
-            //
+            'name' => [
+                'nullable',
+                'string',
+                'between:3,256',
+            ],
+            'description' => [
+                'nullable',
+                'string',
+            ],
+            'category_id' => [
+                'nullable',
+                'exists:categories,id',
+            ],
         ];
     }
 }
