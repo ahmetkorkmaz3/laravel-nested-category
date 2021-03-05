@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="product and category factory, seeder">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3388416d-2743-495c-a509-2b05a3517634.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3388416d-2743-495c-a509-2b05a3517634.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/macellan-quiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/macellan-quiz.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +161,6 @@
       <command value="artisan make:resource Category/CategoryResource" />
       <command value="artisan make:request Category/StoreCategoryRequest" />
       <command value="artisan make:request Category/UpdateCategoryRequest" />
-      <command value="artisan route:list" />
       <command value="artisan make:resource Product/ProductResource" />
       <command value="artisan make:request Product/StoreProductRequest" />
       <command value="artisan make:request Product/UpdateProductRequest" />
@@ -182,6 +174,12 @@
       <command value="artisan db:seed" />
       <command value="artisan migrate" />
       <command value="artisan serve" />
+      <command value="artisan make:controller ProductAuditingController" />
+      <command value="artisan make:controller CategoryAuditingController" />
+      <command value="artisan make:controller CategoryAuditingController --invokable" />
+      <command value="artisan make:controller ProductAuditingController --invokable" />
+      <command value="artisan make:resource Auditing/AuditingResource" />
+      <command value="artisan route:list" />
     </option>
   </component>
   <component name="RunManager">
@@ -201,7 +199,7 @@
       <workItem from="1614877637688" duration="2800000" />
       <workItem from="1614882017709" duration="13000" />
       <workItem from="1614882043740" duration="4553000" />
-      <workItem from="1614938892954" duration="12482000" />
+      <workItem from="1614938892954" duration="13206000" />
     </task>
     <task id="LOCAL-00001" summary="Add CategoryTreeResource">
       <created>1614939922988</created>
