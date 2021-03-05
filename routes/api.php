@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryAuditingController;
+use App\Http\Controllers\ProductAuditingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,8 @@ Route::prefix('categories')->group(function () {
         Route::put('', [CategoryController::class, 'update']);
         Route::delete('', [CategoryController::class, 'destroy']);
 
+        Route::get('auditing', CategoryAuditingController::class);
+
         Route::prefix('products')->group(function () {
             Route::get('', [ProductController::class, 'index']);
             Route::post('', [ProductController::class, 'store']);
@@ -35,4 +39,6 @@ Route::prefix('products/{product}')->group(function () {
     Route::get('', [ProductController::class, 'show']);
     Route::put('', [ProductController::class, 'update']);
     Route::delete('', [ProductController::class, 'destroy']);
+
+    Route::get('auditing', ProductAuditingController::class);
 });
