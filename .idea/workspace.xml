@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="product and category factory, seeder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_04_182248_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_04_182248_create_products_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +151,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -171,7 +174,6 @@
       <command value="artisan migrate:reset" />
       <command value="artisan serve" />
       <command value="php artisan migrate:fresh" />
-      <command value="artisan tinker" />
       <command value="artisan migrate:fresh" />
       <command value="artisan db:seed" />
       <command value="artisan migrate" />
@@ -182,6 +184,7 @@
       <command value="artisan make:controller ProductAuditingController --invokable" />
       <command value="artisan make:resource Auditing/AuditingResource" />
       <command value="artisan route:list" />
+      <command value="artisan tinker" />
     </option>
   </component>
   <component name="RunManager">
