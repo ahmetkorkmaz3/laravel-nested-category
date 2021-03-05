@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryTreeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryTreeResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +158,6 @@
       <command value="artisan make:model Product -mcr --api" />
       <command value="art migrate:reset" />
       <command value="art migrate" />
-      <command value="artisan migrate:reset" />
       <command value="artisan migrate" />
       <command value="artisan make:resource Category/CategoryResource" />
       <command value="artisan make:request Category/StoreCategoryRequest" />
@@ -165,8 +166,15 @@
       <command value="artisan make:resource Product/ProductResource" />
       <command value="artisan make:request Product/StoreProductRequest" />
       <command value="artisan make:request Product/UpdateProductRequest" />
-      <command value="artisan serve" />
       <command value="artisan make:resource Category/CategoryTreeResource" />
+      <command value="artisan make:factory CategoryFactory" />
+      <command value="artisan make:factory ProductFactory" />
+      <command value="artisan migrate:reset" />
+      <command value="artisan serve" />
+      <command value="php artisan migrate:fresh" />
+      <command value="artisan tinker" />
+      <command value="artisan migrate:fresh" />
+      <command value="artisan db:seed" />
     </option>
   </component>
   <component name="RunManager">
@@ -186,7 +194,7 @@
       <workItem from="1614877637688" duration="2800000" />
       <workItem from="1614882017709" duration="13000" />
       <workItem from="1614882043740" duration="4553000" />
-      <workItem from="1614938892954" duration="6045000" />
+      <workItem from="1614938892954" duration="11465000" />
     </task>
     <task id="LOCAL-00001" summary="Add CategoryTreeResource">
       <created>1614939922988</created>
