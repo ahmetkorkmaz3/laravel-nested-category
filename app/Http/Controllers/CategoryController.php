@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Category\StoreCategoryRequest;
 use App\Http\Requests\Category\UpdateCategoryRequest;
 use App\Http\Resources\Category\CategoryResource;
+use App\Http\Resources\Category\CategoryTreeResource;
 use App\Models\Category;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Http\Response;
@@ -24,16 +25,16 @@ class CategoryController extends Controller
             ->with('childrenCategories')
             ->get();
 
-        return CategoryResource::collection($categories);
+        return CategoryTreeResource::collection($categories);
     }
 
     /**
      * @param StoreCategoryRequest $request
-     * @return CategoryResource
+     * @return CategoryTreeResource
      * @throws HttpException
      * @throws NotFoundHttpException
      */
-    public function store(StoreCategoryRequest $request): CategoryResource
+    public function store(StoreCategoryRequest $request): CategoryTreeResource
     {
         DB::beginTransaction();
         try {
@@ -44,16 +45,16 @@ class CategoryController extends Controller
         }
         DB::commit();
 
-        return CategoryResource::make($category);
+        return CategoryTreeResource::make($category);
     }
 
     /**
      * @param Category $category
-     * @return CategoryResource
+     * @return CategoryTreeResource
      */
-    public function show(Category $category): CategoryResource
+    public function show(Category $category): CategoryTreeResource
     {
-        return CategoryResource::make($category->with('childrenCategories')->first());
+        return CategoryTreeResource::make($category->with('childrenCategories')->first());
     }
 
     /**
