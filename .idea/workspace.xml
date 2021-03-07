@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="product and category factory, seeder">
+      <change beforePath="$PROJECT_DIR$/.idea/macellan-quiz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/macellan-quiz.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryTreeResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Category/CategoryTreeResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_04_182248_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_04_182248_create_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +143,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-client" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/owen-it/laravel-auditing" />
+      <path value="$PROJECT_DIR$/vendor/laravel/telescope" />
     </include_path>
   </component>
   <component name="ProjectId" id="1pIjjESFocfEnRT2ZqJPzkQxxEr" />
@@ -174,8 +182,6 @@
       <command value="artisan migrate:reset" />
       <command value="artisan serve" />
       <command value="php artisan migrate:fresh" />
-      <command value="artisan migrate:fresh" />
-      <command value="artisan db:seed" />
       <command value="artisan migrate" />
       <command value="artisan serve" />
       <command value="artisan make:controller ProductAuditingController" />
@@ -185,6 +191,8 @@
       <command value="artisan make:resource Auditing/AuditingResource" />
       <command value="artisan route:list" />
       <command value="artisan tinker" />
+      <command value="artisan db:seed" />
+      <command value="artisan migrate:fresh" />
     </option>
   </component>
   <component name="RunManager">
@@ -205,6 +213,8 @@
       <workItem from="1614882017709" duration="13000" />
       <workItem from="1614882043740" duration="4553000" />
       <workItem from="1614938892954" duration="13206000" />
+      <workItem from="1615112430973" duration="8791000" />
+      <workItem from="1615121988217" duration="198000" />
     </task>
     <task id="LOCAL-00001" summary="Add CategoryTreeResource">
       <created>1614939922988</created>

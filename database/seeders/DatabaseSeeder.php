@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
             });
         });
 
-        Product::factory(100000)->create();
+        for ($i = 0; $i < 100; $i++) {
+            Product::factory(10000)->create();
+        }
 
     }
 }

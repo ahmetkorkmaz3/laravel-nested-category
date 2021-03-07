@@ -25,7 +25,7 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->name,
             'description' => $this->faker->text,
-            'category_id' => Category::find(rand(1,240))->id,
+            'category_id' => rand(1,310),
         ];
     }
 }
