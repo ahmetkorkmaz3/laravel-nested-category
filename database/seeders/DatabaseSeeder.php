@@ -17,11 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         Category::factory(10)->create()->each(function ($category) {
             $category->childrenCategories()->saveMany(Category::factory(6)->create())->each(function ($subCategory) {
-                $subCategory->childrenCategories()->saveMany(Category::factory(4)->create());
+                $subCategory->childrenCategories()->saveMany(Category::factory(4)->create())->each(function ($category) {
+                    $category->childrenCategories()->saveMany(Category::factory(4)->create());
+                });
             });
         });
 
-        Product::factory(100000)->create();
+        Product::factory(10000)->create();
 
     }
 }
