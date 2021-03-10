@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             });
         });
 
-        Product::factory(10000)->create();
+        Product::factory(40000)->create();
 
     }
 }

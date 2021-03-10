@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="product and category factory, seeder">
+    <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="category descendats method add. Some n+1 problems solve. nested category total products count fix.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,8 +184,10 @@
       <command value="artisan make:resource Auditing/AuditingResource" />
       <command value="artisan route:list" />
       <command value="artisan tinker" />
-      <command value="artisan migrate:fresh" />
       <command value="artisan db:seed" />
+      <command value="artisan migrate:fresh" />
+      <command value="artisan migrate --seed" />
+      <command value="artisan migrate:fresh --seed" />
     </option>
   </component>
   <component name="RunManager">
@@ -211,7 +212,7 @@
       <workItem from="1615121988217" duration="1586000" />
       <workItem from="1615124240994" duration="801000" />
       <workItem from="1615370567539" duration="6342000" />
-      <workItem from="1615402706724" duration="2108000" />
+      <workItem from="1615402706724" duration="3554000" />
     </task>
     <task id="LOCAL-00001" summary="Add CategoryTreeResource">
       <created>1614939922988</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614950385197</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="category descendats method add. Some n+1 problems solve. nested category total products count fix.">
+      <created>1615404918289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615404918290</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +272,7 @@
     <MESSAGE value="Simple CategoryResource" />
     <MESSAGE value="Product resource and requests" />
     <MESSAGE value="product and category factory, seeder" />
-    <option name="LAST_COMMIT_MESSAGE" value="product and category factory, seeder" />
+    <MESSAGE value="category descendats method add. Some n+1 problems solve. nested category total products count fix." />
+    <option name="LAST_COMMIT_MESSAGE" value="category descendats method add. Some n+1 problems solve. nested category total products count fix." />
   </component>
 </project>

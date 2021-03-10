@@ -23,6 +23,7 @@ class CategoryController extends Controller
     {
         $categories = Category::whereNull('category_id')
             ->with('childrenCategories')
+            ->withCount('products')
             ->get();
 
         return CategoryTreeResource::collection($categories);
