@@ -4,8 +4,6 @@
     <list default="true" id="a93c9190-7dea-4bd6-86de-82830e5a33aa" name="Default Changelist" comment="category descendats method add. Some n+1 problems solve. nested category total products count fix.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ProductFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ProductFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +210,8 @@
       <workItem from="1615121988217" duration="1586000" />
       <workItem from="1615124240994" duration="801000" />
       <workItem from="1615370567539" duration="6342000" />
-      <workItem from="1615402706724" duration="3554000" />
+      <workItem from="1615402706724" duration="4531000" />
+      <workItem from="1615460006467" duration="137000" />
     </task>
     <task id="LOCAL-00001" summary="Add CategoryTreeResource">
       <created>1614939922988</created>

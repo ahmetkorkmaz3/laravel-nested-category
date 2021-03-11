@@ -55,7 +55,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category): CategoryTreeResource
     {
-        return CategoryTreeResource::make($category->with('childrenCategories')->first());
+        $category = $category->with('childrenCategories')->withCount('products')->first();
+        return CategoryTreeResource::make($category);
     }
 
     /**
